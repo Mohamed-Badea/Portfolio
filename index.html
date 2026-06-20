@@ -8,8 +8,9 @@
 </head>
 <body>
 
+    <!-- Header Navigation -->
     <nav class="navbar">
-        <div class="logo">MBR<span>.</span></div>
+        <div class="logo">MBR</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -19,6 +20,7 @@
         </ul>
     </nav>
 
+    <!-- Hero Spotlight Section -->
     <header class="hero">
         <div class="hero-content">
             <span class="greeting">Welcome to my space</span>
@@ -32,6 +34,7 @@
         </div>
     </header>
 
+    <!-- Main Section: About -->
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -41,52 +44,82 @@
         </div>
     </section>
 
+    <!-- Main Section: Skills & Languages -->
     <section id="skills" class="section alt-bg">
         <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
+            <h2 class="section-title">Technical Expertise & Skills</h2>
             <div class="skills-wrapper">
                 
                 <div class="skills-column">
-                    <h3>Core Development</h3>
+                    <h3>Software & Core Development</h3>
                     <div class="tag-cloud">
                         <span class="tag">Frontend Development</span>
                         <span class="tag">C++</span>
+                        <span class="tag">UI/UX Design</span>
+                    </div>
+                    <h3 style="margin-top: 25px;">Relevant Coursework</h3>
+                    <div class="tag-cloud">
                         <span class="tag">Web Engineering</span>
                         <span class="tag">Data Structures & Algorithms</span>
+                        <span class="tag">Applied Programming</span>
                     </div>
                 </div>
 
                 <div class="skills-column">
-                    <h3>Systems Engineering</h3>
+                    <h3>Hardware & Embedded Systems</h3>
                     <div class="tag-cloud">
-                        <span class="tag">Embedded Systems</span>
-                        <span class="tag">ESP32 & Arduino UNO</span>
+                        <span class="tag">Arduino UNO</span>
+                        <span class="tag">ESP32</span>
                         <span class="tag">System Integration</span>
                         <span class="tag">Sensors & Interfacing</span>
+                    </div>
+                    <h3 style="margin-top: 25px;">Relevant Coursework</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Embedded Systems</span>
                         <span class="tag">Microprocessors Systems</span>
                         <span class="tag">Data Acquisition</span>
+                        <span class="tag">Digital Logic Systems</span>
                     </div>
                 </div>
 
                 <div class="skills-column">
-                    <h3>UI/UX & Tools</h3>
+                    <h3>Tools & Soft Skills</h3>
                     <div class="tag-cloud">
-                        <span class="tag">UI/UX Design</span>
-                        <span class="tag">Figma Prototyping</span>
                         <span class="tag">VS Code</span>
-                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Arduino IDE</span>
+                        <span class="tag">GitHub</span>
+                    </div>
+                    <h3 style="margin-top: 25px;">Professional Traits</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Highly Organised</span>
+                        <span class="tag">Self Motivated</span>
+                        <span class="tag">Team Collaboration</span>
+                        <span class="tag">Work Under Stress</span>
                     </div>
                 </div>
 
             </div>
+
+            <!-- Languages Subsection -->
+            <div class="skills-column" style="margin-top: 40px; text-align: left;">
+                <h3>Languages</h3>
+                <div class="tag-cloud">
+                    <span class="tag"><strong>Arabic:</strong> Native</span>
+                    <span class="tag"><strong>English:</strong> Fluent</span>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Main Section: Project Grid -->
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">Engineered Solutions</h2>
             <div class="modern-grid">
                 
+                <!-- Project 1: CodeAlpha Calculator -->
                 <div class="card">
                     <div class="card-header">
                         <span class="meta-tag frontend">Frontend</span>
@@ -98,30 +131,16 @@
                     </div>
                 </div>
 
+                <!-- Project 2: Console Based Banking System -->
                 <div class="card">
                     <div class="card-header">
-                        <span class="meta-tag hardware">Hardware / AI</span>
+                        <span class="meta-tag core">C++ / OOP</span>
                     </div>
-                    <h3>Arabic Sign Language Translator</h3>
-                    <p>Collaborated in an engineering team to develop a real-time translation system utilizing an ESP32 microcontroller, flex sensors, and an IMU to capture hand kinetics. Integrated Google MediaPipe for computer vision processing to translate gestures into synthesized speech.</p>
+                    <h3>Console Based Banking System</h3>
+                    <p>Developed an object-oriented system executing core banking functionalities including account creation, profile updates, and secure fund transfers. Implemented algorithmic logic for financial transaction validation, cash deposits or withdrawals, and administrative password management.</p>
                 </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <span class="meta-tag robotics">Robotics</span>
-                    </div>
-                    <h3>Autonomous Ball Detection Robot</h3>
-                    <p>Partnered with a team to develop a robotic car utilizing a camera sensor to scan surroundings and process real-time visual data. Developed color and shape detection algorithms to identify specific targets, dynamically adjusting motor controllers for autonomous navigation.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <span class="meta-tag iot">IoT / Embedded</span>
-                    </div>
-                    <h3>Water Quality Monitor</h3>
-                    <p>Built an interactive monitoring system using an ESP32 and a TDS sensor to analyze water samples and compute precise ppm levels. Configured an LCD screen via I2C protocol for localized data display alongside a web-based dashboard for remote tracking.</p>
-                </div>
-
+                <!-- Project 3: Web Portal -->
                 <div class="card">
                     <div class="card-header">
                         <span class="meta-tag frontend">Full-Stack</span>
@@ -130,21 +149,41 @@
                     <p>Architected a full-stack web application consisting of a responsive 3-page React frontend (Home, About, Contact) built with Vite and Bootstrap. Implemented secure user interaction logic using customized Contact and Newsletter forms.</p>
                 </div>
 
+                <!-- Project 4: Water Quality Monitor -->
                 <div class="card">
                     <div class="card-header">
-                        <span class="meta-tag core">C++ / OOP</span>
+                        <span class="meta-tag iot">IoT / Embedded</span>
                     </div>
-                    <h3>Console Based Banking System</h3>
-                    <p>Developed an object-oriented system executing core banking functionalities including account creation, profile updates, and secure fund transfers. Implemented algorithmic logic for financial transaction validation.</p>
+                    <h3>Water Quality Monitor</h3>
+                    <p>Collaborated within a project team to build an interactive monitoring system using an ESP32 and a TDS sensor to analyze water samples and compute precise ppm levels. Coordinated hardware-software integration, configuring an LCD screen via I2C protocol for localized data display alongside a web-based dashboard for remote tracking.</p>
+                </div>
+
+                <!-- Project 5: Autonomous Ball Detection Robot -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="meta-tag robotics">Robotics</span>
+                    </div>
+                    <h3>Autonomous Ball Detection Robot</h3>
+                    <p>Partnered with a team to develop a robotic car utilizing a camera sensor to scan surroundings and process real-time visual data. Developed color and shape detection algorithms to identify specific targets, dynamically adjusting motor controllers for autonomous navigation.</p>
+                </div>
+
+                <!-- Project 6: Arabic Sign Language Translator -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="meta-tag hardware">Hardware / AI</span>
+                    </div>
+                    <h3>Arabic Sign Language Translator</h3>
+                    <p>Collaborated in an engineering team to develop a real-time translation system utilizing an ESP32 microcontroller, flex sensors, and an IMU to capture hand kinetics. Worked closely with team members to integrate Google MediaPipe for computer vision processing to translate gestures into synthesized speech.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
+    <!-- Main Section: Timeline -->
     <section id="education" class="section alt-bg">
         <div class="container">
-            <h2 class="section-title">Timeline & Tracks</h2>
+            <h2 class="section-title">Education & Trainings</h2>
             <div class="interactive-timeline">
                 
                 <div class="timeline-block">
@@ -154,7 +193,7 @@
                         <h3>Bachelor's in Computer Engineering</h3>
                         <h4>Arab Academy for Science, Technology & Maritime Transport (AASTMT)</h4>
                         <span class="timeline-time">2022 - Present</span>
-                        <p>Core focus on software & hardware design tracks including Web Engineering, Data Structures, Embedded Systems, Microprocessors, and Data Acquisition architectures.</p>
+                        <p>Pursuing comprehensive hardware-software tracking focusing heavily on core engineering competencies, digital layouts, and advanced software architectures.</p>
                     </div>
                 </div>
 
@@ -163,9 +202,9 @@
                     <div class="timeline-content">
                         <span class="timeline-badge special">Professional Training</span>
                         <h3>UI/UX Design Training Track</h3>
-                        <h4>ICTHUB</h4>
+                        <h4>ICTHUB (Online)</h4>
                         <span class="timeline-time">07/2025 - 08/2025</span>
-                        <p>Completed intensive product life cycle training focusing on detailed user research, interactive wireframing, and interactive high-fidelity prototyping inside Figma.</p>
+                        <p>Completed a month training program focused on the product design lifecycle. Developed practical skills in user research, wireframing, and interactive prototyping using Figma. Learned to apply user psychology and interface design principles to bridge the gap between complex software backend functionality and seamless frontend user experiences.</p>
                     </div>
                 </div>
 
@@ -173,6 +212,7 @@
         </div>
     </section>
 
+    <!-- Main Section: Contact -->
     <section id="contact" class="section">
         <div class="container">
             <div class="contact-panel">
@@ -191,6 +231,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Mohamed Badea. Engineering Portfolio.</p>
     </footer>
