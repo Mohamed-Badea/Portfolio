@@ -379,7 +379,7 @@ body {
 }
 
 /* ==========================================
-   CONTACT PANEL & FOOTER
+   CONTACT PANEL LINKS & INTERACTIVITY
    ========================================== */
 .contact-panel {
     background-color: #f8fbfd;
@@ -404,6 +404,24 @@ body {
     margin: 10px 0;
     font-size: 1.1rem;
     color: #4a4a4a;
+}
+
+.contact-link {
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #3498db;
+}
+
+/* Disables telephone clicking strictly on desktop viewports */
+@media (min-width: 769px) {
+    .mobile-phone-link {
+        pointer-events: none;
+        cursor: default;
+    }
 }
 
 .contact-actions {
@@ -468,17 +486,21 @@ footer {
         font-size: 1.1rem;
     }
 
+    /* Fixed Button Stack Hierarchy */
     .hero-buttons {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
         gap: 12px;
+        margin: 0 auto;
     }
 
     .btn {
         width: 100%;
+        max-width: 280px;
         text-align: center;
+        white-space: nowrap;
     }
 
     .section {
