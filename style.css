@@ -49,6 +49,7 @@ body {
     letter-spacing: 1px;
 }
 
+/* Base Logo Color and Accent Anchor Match */
 .logo span {
     color: #3498db;
 }
@@ -118,7 +119,7 @@ body {
     margin-bottom: 35px;
 }
 
-/* BUTTON ARCHITECTURES */
+/* BUTTON ARCHITECTURES (Theme Color Matched) */
 .hero-buttons {
     display: flex;
     gap: 20px;
@@ -147,7 +148,7 @@ body {
 .btn-secondary {
     background-color: transparent;
     color: #3498db;
-    border: 2px solid #3498db;
+    border: 2px solid #3498db; /* Frame color matched to logo dot */
 }
 
 .btn-secondary:hover {
@@ -263,8 +264,12 @@ body {
     display: inline-block;
 }
 
-/* All projects unified to use the clean light-blue theme */
-.hardware { background-color: #ebf5fb; color: #2980b9; }
+/* Project Badge Frame and Font Theme set to Logo Blue Accent */
+.hardware { 
+    background-color: #e8f4fd !important; 
+    color: #3498db !important; 
+    border: 1px solid rgba(52, 152, 219, 0.15);
+}
 
 .card h3 {
     font-size: 1.4rem;
@@ -344,8 +349,8 @@ body {
 }
 
 .timeline-badge.special {
-    background-color: #fef9e7;
-    color: #f1c40f;
+    background-color: #e8f4fd !important; /* Standardized to Logo theme color */
+    color: #3498db !important;
 }
 
 .timeline-content h3 {
@@ -406,6 +411,7 @@ body {
     color: #3498db;
 }
 
+/* Desktop Interactivity Restriction Override Layer */
 .responsive-phone-link {
     color: #4a4a4a !important;       
     text-decoration: none !important; 
@@ -417,6 +423,17 @@ body {
     display: flex;
     gap: 15px;
     justify-content: center;
+}
+
+/* Contact Button Custom Borders matching theme color */
+.contact-panel .btn-secondary {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.contact-panel .btn-secondary:hover {
+    background-color: #3498db;
+    color: #ffffff;
 }
 
 footer {
