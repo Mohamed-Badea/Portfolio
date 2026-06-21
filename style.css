@@ -322,7 +322,7 @@ body {
     padding: 25px;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.02);
-    text-align: left;
+    text-align: left; /* Explicitly keeps reading alignment left inside timeline blocks */
 }
 
 .timeline-badge {
@@ -402,8 +402,8 @@ body {
     color: #4a4a4a;
     text-decoration: none;
     transition: color 0.3s ease;
-    pointer-events: none;
-    cursor: default;
+    pointer-events: none; /* Stops clicking actions completely on laptop browsers */
+    cursor: default;       /* Keeps simple text mouse indicator on laptop */
 }
 
 .responsive-phone-link:hover {
