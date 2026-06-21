@@ -416,12 +416,12 @@ body {
     color: #3498db;
 }
 
-/* Disables telephone clicking strictly on desktop viewports */
-@media (min-width: 769px) {
-    .mobile-phone-link {
-        pointer-events: none;
-        cursor: default;
-    }
+/* Desktop Handling: Show regular text, hide click link */
+.desktop-phone-text {
+    display: inline;
+}
+.mobile-phone-link {
+    display: none;
 }
 
 .contact-actions {
@@ -457,6 +457,14 @@ footer {
 
 /* Handles smartphones and compact viewports */
 @media (max-width: 768px) {
+    /* Mobile Handling: Hide regular text, show clickable tel hyperlink */
+    .desktop-phone-text {
+        display: none !important;
+    }
+    .mobile-phone-link {
+        display: inline !important;
+    }
+
     /* Navigation Stack Layout */
     .navbar {
         padding: 15px 20px;
