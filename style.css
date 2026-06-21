@@ -49,7 +49,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* Accent Color matches the dot exactly */
 .logo span {
     color: #3498db;
 }
@@ -264,10 +263,7 @@ body {
     display: inline-block;
 }
 
-.core { background-color: #e8f4fd; color: #3498db; }
-.frontend { background-color: #eafaf1; color: #2ecc71; }
-.iot { background-color: #fef9e7; color: #f1c40f; }
-.robotics { background-color: #f5eeeb; color: #e67e22; }
+/* All projects unified to use the clean light-blue theme */
 .hardware { background-color: #ebf5fb; color: #2980b9; }
 
 .card h3 {
@@ -282,7 +278,7 @@ body {
 }
 
 /* ==========================================
-   INTERACTIVE TIMELINE (EDUCATION)
+   INTERACTIVE TIMELINE (UNIFIED SAME-SIDE)
    ========================================== */
 .interactive-timeline {
     position: relative;
@@ -294,33 +290,32 @@ body {
     content: '';
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 20px;
     width: 2px;
     height: 100%;
     background-color: #e1e8ed;
-    transform: translateX(-50%);
 }
 
 .timeline-block {
     position: relative;
-    width: 50%;
-    padding: 20px 40px;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 0;
     box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
-.timeline-block:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-
+.timeline-block:nth-child(odd),
 .timeline-block:nth-child(even) {
-    left: 50%;
+    left: 0;
     text-align: left;
 }
 
 .timeline-marker {
     position: absolute;
     top: 25px;
+    left: 20px !important;
+    right: auto !important;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -328,14 +323,7 @@ body {
     border: 4px solid #ffffff;
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
     z-index: 5;
-}
-
-.timeline-block:nth-child(odd) .timeline-marker {
-    right: -8px;
-}
-
-.timeline-block:nth-child(even) .timeline-marker {
-    left: -8px;
+    transform: translateX(-50%);
 }
 
 .timeline-content {
@@ -343,7 +331,7 @@ body {
     padding: 25px;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.02);
-    text-align: left;
+    text-align: left !important;
 }
 
 .timeline-badge {
@@ -418,17 +406,11 @@ body {
     color: #3498db;
 }
 
-/* Responsive Phone Interactivity Layer */
 .responsive-phone-link {
-    color: #4a4a4a;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    pointer-events: none; /* Strictly isolates click tracking from desktop laptops */
-    cursor: default;       
-}
-
-.responsive-phone-link:hover {
-    color: #4a4a4a;
+    color: #4a4a4a !important;       
+    text-decoration: none !important; 
+    pointer-events: none !important;   
+    cursor: default !important;       
 }
 
 .contact-actions {
@@ -448,8 +430,6 @@ footer {
 /* ==========================================
    MOBILE RESPONSIVENESS (MEDIA QUERIES)
    ========================================== */
-
-/* Handles tablets and mid-size viewports */
 @media (max-width: 992px) {
     .modern-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -462,18 +442,18 @@ footer {
     }
 }
 
-/* Handles smartphones and compact viewports */
 @media (max-width: 768px) {
-    /* Re-activate phone link clicking strictly on mobile browsers */
     .responsive-phone-link {
+        color: #4a4a4a !important; 
+        text-decoration: none !important;
         pointer-events: auto !important;
         cursor: pointer !important;
     }
+    
     .responsive-phone-link:hover {
         color: #3498db !important;
     }
 
-    /* Navigation Stack Layout */
     .navbar {
         padding: 15px 20px;
         flex-direction: column;
@@ -487,7 +467,6 @@ footer {
         justify-content: center;
     }
 
-    /* Scaling Content Components Down */
     .hero {
         padding: 80px 20px;
         text-align: center;
@@ -502,7 +481,6 @@ footer {
         font-size: 1.1rem;
     }
 
-    /* Fixed Button Stack Hierarchy */
     .hero-buttons {
         display: flex;
         flex-direction: column;
@@ -533,7 +511,6 @@ footer {
         line-height: 1.6;
     }
 
-    /* Transforming Timeline into a Vertical Line Layout */
     .interactive-timeline::before {
         left: 20px;
     }
@@ -555,7 +532,6 @@ footer {
         right: auto !important;
     }
 
-    /* Formatting Contact Actions Alignment */
     .contact-panel {
         padding: 30px 20px;
     }
