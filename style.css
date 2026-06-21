@@ -49,6 +49,7 @@ body {
     letter-spacing: 1px;
 }
 
+/* Accent Color matches the dot exactly */
 .logo span {
     color: #3498db;
 }
@@ -249,6 +250,26 @@ body {
     box-shadow: 0 8px 25px rgba(52, 152, 219, 0.1);
 }
 
+.card-header {
+    margin-bottom: 15px;
+}
+
+.meta-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.core { background-color: #e8f4fd; color: #3498db; }
+.frontend { background-color: #eafaf1; color: #2ecc71; }
+.iot { background-color: #fef9e7; color: #f1c40f; }
+.robotics { background-color: #f5eeeb; color: #e67e22; }
+.hardware { background-color: #ebf5fb; color: #2980b9; }
+
 .card h3 {
     font-size: 1.4rem;
     color: #1a1a1a;
@@ -322,7 +343,7 @@ body {
     padding: 25px;
     border-radius: 6px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.02);
-    text-align: left; /* Explicitly keeps reading alignment left inside timeline blocks */
+    text-align: left;
 }
 
 .timeline-badge {
@@ -402,8 +423,8 @@ body {
     color: #4a4a4a;
     text-decoration: none;
     transition: color 0.3s ease;
-    pointer-events: none; /* Stops clicking actions completely on laptop browsers */
-    cursor: default;       /* Keeps simple text mouse indicator on laptop */
+    pointer-events: none; /* Strictly isolates click tracking from desktop laptops */
+    cursor: default;       
 }
 
 .responsive-phone-link:hover {
